@@ -1,0 +1,114 @@
+/* 位置部分的样式 */
+.location-box {
+    display: flex;
+    gap: 24rpx;
+    flex-direction: column;
+}
+
+.location-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.location-text {
+    display: flex;
+}
+
+.location {
+    font-size: 16px;
+    color: #555;
+    font-weight: normal;
+    margin-left: 10rpx; /* 与图标和标题保持间距 */
+}
+
+.header {
+    display: flex;
+    gap: 8px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 24px;
+}
+
+.content {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.amount {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.money {
+    color: #e54d42;
+}
+
+.product-list {
+    margin-top: 48px;
+
+}
+
+.product-title {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-item-box {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.product-item-img {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.product-item-img image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-item {
+    padding: 10px 0;
+}
+
+.product-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.product-item-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 14px;
+    color: #67c1b5;
+}
+
+.btn-detail{
+    font-size: 14px;
+    background: #67c1b5;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 24px;
+}

@@ -1,0 +1,54 @@
+<scroll-view>
+    <view class="container">
+        <view class="header">
+            <van-icon name="location-o" size="20"/>
+            <view class="location" wx:if="{{location || address}}">{{ location || address }}</view>
+            <view class="location" wx:else>定位中</view>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="amount">
+            <view class="amount-box">
+                今日提成 :
+                <text class="money">99.99</text>
+                元
+            </view>
+            <view class="site-name">南泰中央华府站点</view>
+        </view>
+
+        <view class="product-list">
+            <view class="product-title">
+                <text>今日订单</text>
+                <van-search
+                        value="{{searchValue}}"
+                        placeholder="输入商品名/用户手机号搜索"
+                        bind:search="onSearch"
+                        bind:clear="onClear"
+                        shape="round"
+                />
+            </view>
+            <!-- 无数据时显示 -->
+            <view wx:if="{{filteredList.length === 0}}" class="empty-state">
+                <van-empty image="search" description="没有查到此数据哦" />
+            </view>
+
+            <view class="product-item" wx:for="{{filteredList}}" wx:key="id">
+                <view class="product-item-box">
+                    <view class="product-item-img">
+                        <image src="{{item.image}}" mode="aspectFill"></image>
+                    </view>
+                    <view class="product-item-info">
+                        <view class="product-item-name">{{item.name}}</view>
+                        <view class="product-item-price">
+                            <text class="price">用户 :{{item.username}}</text>
+                            <view class="btn-detail" bindtap="onDetail">查看详情</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+</scroll-view>

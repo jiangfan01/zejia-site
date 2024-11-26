@@ -1,0 +1,82 @@
+<view class="container">
+    <view class="header">
+        <view class="product-info">
+            <image src="{{product.img}}" mode=""></image>
+            <view class="product-detail">
+                <view class="product-title">{{product.name}}</view>
+                <view class="product-price">￥{{product.price}}</view>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="refund-container">
+        <view class="refund-icon">
+            <van-icon name="passed" size="26" color="#67c1b5"/>
+            <view class="refund-text">
+                退款成功
+            </view>
+        </view>
+
+        <view class="refund-detail">
+            <view class="refund-detail-text">退款信息</view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">退款金额</view>
+                <view class="refund-detail-item-content">￥{{refund.price}}</view>
+            </view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">退款原因</view>
+                <view class="refund-detail-item-content">{{refund.reason}}</view>
+            </view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">退款数量</view>
+                <view class="refund-detail-item-content">{{refund.count}}</view>
+            </view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">退款去路</view>
+                <view class="refund-detail-item-content">退回原支付方式账户</view>
+            </view>
+        </view>
+
+        <view class="refund-introduce">
+            <view class="introduce-title">说明和凭证</view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">退款说明</view>
+                <view class="refund-detail-item-content">{{refund.explanation || "无"}}</view>
+            </view>
+            <view class="refund-detail-item">
+                <view class="refund-detail-item-title">凭证图片</view>
+                <view class="refund-detail-item-content">
+                    <image src="{{refund.explanationImg}}" wx:if="{{refund.explanationImg}}" mode="aspectFill"></image>
+                    <view class="no-img" wx:else="{{!refund.explanationImg}}">无</view>
+                </view>
+            </view>
+        </view>
+
+        <!--        <view class="refund-schedule">-->
+        <!--            <van-cell-->
+        <!--                    title="退款进度"-->
+        <!--                    is-link-->
+        <!--                    bindtap="showPopup"-->
+        <!--                    custom-class="cell"-->
+        <!--            />-->
+
+        <!--            <van-popup-->
+        <!--                    show="{{show}}"-->
+        <!--                    closeable-->
+        <!--                    position="bottom"-->
+        <!--                    custom-style="height: 50%"-->
+        <!--                    bind:close="onClose"-->
+        <!--            >-->
+        <!--                <view class="pop-title">退款进度</view>-->
+        <!--                <van-steps-->
+        <!--                        steps="{{ steps }}"-->
+        <!--                        active="{{ active }}"-->
+        <!--                        active-icon="success"-->
+        <!--                        active-color="#38f"-->
+        <!--                />-->
+        <!--            </van-popup>-->
+        <!--        </view>-->
+
+    </view>
+</view>

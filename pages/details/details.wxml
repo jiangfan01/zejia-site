@@ -1,0 +1,60 @@
+<scroll-view scroll-y="true" class="scroll-view">
+    <view class="banner">
+        <image src="{{banner}}" mode=""></image>
+    </view>
+    <view class="content">
+        <view class="product">
+            <view class="product-name">商品名 :
+                <text class="name">超级无敌苹果666</text>
+            </view>
+            <view class="product-price">价格 :
+                <text class="price">￥ 666</text>
+            </view>
+            <view class="product-desc">描述 :
+                <text class="desc">{{desc}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="user-info">
+        <view class="user-number">
+            订单号 :
+            <text class="number">{{userinfo.orderNumber}}</text>
+        </view>
+        <view class="user-name">下单用户名 :
+            <text class="name">{{userinfo.username}}</text>
+        </view>
+        <view class="user-phone">
+            手机号 :
+            <text class="phone">{{userinfo.phone}}</text>
+        </view>
+        <view class="user-number">
+            下单数量 :
+            <text class="number">{{userinfo.number}}</text>
+        </view>
+    </view>
+    <scroll-view scroll-x="true" class="recommend-list">
+        <view class="title">
+            <text>{{userinfo.username}}的其他待提货商品</text>
+        </view>
+        <view class="recommend-scroll">
+            <block wx:for="{{recommendations}}" wx:key="id">
+                <view class="recommend-item">
+                    <image class="recommend-image" src="{{item.image}}" mode="aspectFill"></image>
+                    <view class="recommend-info">
+                        <view class="recommend-name">{{item.name}}</view>
+                        <view class="recommend-price">￥{{item.price}}</view>
+                        <view class="recommend-status">
+                            订单号:
+                            <text>{{item.number}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="scan">
+        <view class="scan-code" bindtap="scanCode">
+            扫码提货
+        </view>
+    </view>
+</scroll-view>

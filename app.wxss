@@ -1,0 +1,8 @@
+/**app.wxss**/
+.container {
+  margin: 20px;
+}
+
+page {
+  background: #f8f8f8;
+}

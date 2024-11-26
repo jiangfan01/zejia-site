@@ -1,0 +1,159 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f5f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 顶部 Banner */
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 内容区域 */
+.content {
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 商品详情 */
+.product-name {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e54d42;
+}
+
+.product-desc {
+    margin-top: 12px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 用户信息 */
+.user-info {
+    padding: 20px;
+    margin: 20px 16px 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-info > view {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* 推荐列表 */
+.recommend-list {
+    margin: 24px 16px;
+    padding: 12px 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+    padding: 0 16px;
+}
+
+.recommend-status{
+    color: #888;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+/* 隐藏滚动条 */
+.recommend-scroll {
+    display: flex;
+    gap: 12px;
+    padding: 0 20px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* 保留惯性滚动 */
+    scrollbar-width: none; /* Firefox */
+}
+
+.recommend-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.recommend-item {
+    width: 160px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+
+
+.recommend-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recommend-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+    min-height: 60px;
+}
+
+.recommend-price {
+    color: #e54d42;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 扫码提货按钮 */
+.scan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.scan-code {
+    /*position: fixed;*/
+    /*bottom: 20px;*/
+    /*left: 50%;*/
+    background: linear-gradient(45deg, #67c1b5, #6ec1f5);
+    color: white;
+    padding: 12px 60px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
